@@ -12,7 +12,7 @@
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+        <script type="text/javascript" src="assets/js/jquery.mask.js"></script>
 
         <!--CSS Héctor Q. Torres-->
         <link rel="stylesheet" type="text/css" href="assets/css/styleConsult.css">
@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-container">
-                                        <input inputmode="numeric"  class="reduce-inputB" type="text" placeholder="CPF"/>
+                                        <input id="cpf"  class="reduce-inputB" type="text" placeholder="CPF"/>
                                         <button class="bt-container" type="submit"><img class="bt-search" src="assets/img/magnifier.png"/></button>                                             
                                     </div>
                                 </div> 
@@ -52,13 +52,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div> 
         <!--JS Héctor Q. Torres-->
         <script>
-
+           //CPF mask
+            $("#cpf").mask('000.000.000-00');
         </script>
-
     </body>
-
 </html>

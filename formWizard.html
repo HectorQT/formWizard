@@ -12,7 +12,9 @@
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.mask.js"></script>
 
+            
         <!--CSS Héctor Q. Torres-->
         <link rel="stylesheet" type="text/css" href="assets/css/styleForm.css"/>
 
@@ -89,7 +91,7 @@
                                             <input type="text" placeholder="Nome Completo" />
                                         </div>
                                         <div class="reduce-container">
-                                            <input type="number" placeholder="CPF" />
+                                            <input id="cpf" type="text" placeholder="CPF" />
                                         </div>
                                         </u>
                                     </div>
@@ -108,6 +110,7 @@
                                         </div>
                                     </div>
                                     <div>
+                                        <!--add path of your dir-->
                                         <iframe id="pdf-js-viewer" src="http://localhost:8081/Projects/formWizard/web/viewer.html?file=../assets/docs/example.pdf"
                                         title="webviewer" frameborder="0" width="100%" height="500"></iframe>
                                     </div>                
@@ -170,10 +173,8 @@
         </div>
         
         <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-        
         <!--JS Héctor Q. Torres-->
-        <script type='text/javascript' src="assets/js/scripts.js"></script>
-
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
     </body>
 
 </html>

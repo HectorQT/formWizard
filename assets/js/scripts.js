@@ -99,6 +99,8 @@ $('#clearT2').on('click', function(e) {
     $("#signature64T2").val('');
 });
 
+
+
 function sendData(){
 
     //const data = new FormData();
@@ -119,6 +121,5 @@ function sendData(){
 
 }
 
-
-
-
+//CPF mask
+$("#cpf").mask('000.000.000-00');
