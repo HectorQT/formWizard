@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+p {
+    color: grey
+}
+
+a, a:hover, a:focus{
+    text-decoration: none;
+    color: white;
+    font-family: montserrat;
+    text-align: center;
+}
+
+.check_inf{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style:none;
+    padding-left: 10px;
+    color: gray;
+    font-family: montserrat;
+    font-size: 14px;
+    width:50%; 
+}
+
+.hidden{
+    display:none;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.flex-container3{
+    display: flex;
+    justify-content:space-between;
+}
+
+.spacing-label-first{
+    padding-bottom: 2px;
+}
+
+.spacing-label-others{
+    margin-top: 25px;
+    padding-bottom: 2px;
+}
+
+
+.bt-link{
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: #ffffff;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 60px 5px 10px 10px;
+    float: left;
+}
+
+.float-l{
+    position: fixed;
+    float:left;
+}
+
+#heading {
+    text-transform: uppercase;
+    color: rgb(213, 38, 48);
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+
+
+#msform .reduce-container{
+    width: 49%;
+    height: 42px;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px;    
+}
+
+#msform .reduce-container-label{
+    width: 49%;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+
+#msform .reduce-inputB{
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0px;
+    width: 80%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+.bt-container{
+    height: 100%;
+    width: 17%;
+    border: none;
+
+}
+
+.bt-container:hover{
+    background-color:rgb(213, 38, 48);
+    border: 1px solid rgb(213, 38, 48);
+}
+
+.bt-search{
+    width: 45%;
+}
+
+.bt-clear {
+    width: 100px;
+    background:#2C3E50;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    padding: 10px 5px;
+    margin: 20px 0px 35px 5px;
+    font-family: montserrat;
+}
+
+
+.bt-clear:hover{
+    background-color: rgb(200, 0, 10)
+}
+
+.action-button-menu{
+    width: 100px;
+    background: #000000;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 20px 5px 10px 0px;
+}
+
+.action-button-inicio {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 20px 5px 10px 0px;
+}
+
+.action-button-inicio:hover,
+.action-button-inicio:focus {
+    background-color: rgb(213, 38, 48);
+}
+
+.action-button-menu:hover,
+.action-button-menu:focus {
+    background-color: rgb(200, 0, 10);
+}
+
+select:invalid{
+    color: gray;
+}
+
+select{
+    padding: 14px 15px 8px 15px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0px;
+    width: 100%;
+    font-family: montserrat;
+    color:#2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+
+#msform input,
+#msform textarea{
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0px;
+    width: 100%;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+
+#msform .action-button {
+    width: 100px;
+    background: rgb(213, 38, 48);
+    font-weight: bold;
+    color: white;
+    border: 1px none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 20px 0px 10px 5px;
+    float: right
+}
+
+
+#msform .action-button-f{
+    width: 100px;
+    background: #2C3E50;
+    font-weight: bold;
+    color: white;
+    border: 1px none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 20px 0px 10px 5px;
+    float: right
+}
+
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: rgb(200, 0, 10)
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 20px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: rgb(213, 38, 48);
+    font-weight: normal;
+    text-align: left
+}
+
+.color-text {
+    color: rgb(213, 38, 48);
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar { 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: rgb(213, 38, 48)
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f018"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f044"
+}
+
+#progressbar #contract:before {
+    font-family: FontAwesome;
+    content: "\f0f6"
+}
+
+#progressbar #testemunhas:before{
+    font-family: FontAwesome;
+    content: "\f0c0";
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: rgb(213, 38, 48)
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: rgb(213, 38, 48)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+@media(max-width: 600px){
+    #heading {
+        text-transform: uppercase;
+        color: rgb(213, 38, 48);
+        font-weight: normal;
+        font-size: 22px;
+    }
+
+        
+    #progressbar li {
+        list-style-type: none;
+        font-size: 12px;
+        width: 25%;
+        float: left;
+        position: relative;
+        font-weight: 400
+    }
+
+    .fs-title {
+        font-size: 18px;
+        color: rgb(213, 38, 48);
+        font-weight: normal;
+        text-align: left;
+    }
+    
+    .steps {
+        font-size: 15px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: right
+    }
+
+    
+    #msform .action-button {
+        width: 80px;
+        background: rgb(213, 38, 48);
+        font-weight: bold;
+        font-family: candara;
+        color: white;
+        border: 1px none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 20px 0px 10px 5px;
+        float: right
+    }
+
+
+    #msform .action-button-f{
+        width: 80px;
+        background: #2C3E50;
+        font-weight: bold;
+        font-family: candara;
+        color: white;
+        border: 1px none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 20px 0px 10px 5px;
+        float: right
+    }
+
+    #msform .action-button-previous {
+        width: 80px;
+        background: #616161;
+        font-weight: bold;
+        font-family: candara;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 20px 5px 10px 0px;
+        float: right
+    }
+
+    #msform input,
+    #msform textarea{
+        padding: 8px 15px 8px 15px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0px;
+        width: 100%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #2C3E50;
+        background-color: #ECEFF1;
+        font-size: 16px;
+        letter-spacing: 1px
+    }
+
+    .flex-container{
+        display: flex;
+       flex-direction: column;
+        height: 90px;
+    }
+
+    #msform .reduce-container{
+        width: 100%;
+        height: 42px;
+        font-family: montserrat;
+        color: #2C3E50;
+        background-color: #ECEFF1;
+        font-size: 16px;
+        letter-spacing: 1px;    
+    }
+        
+    .action-button-menu{
+        width: 80px;
+        background: #000000;
+        font-weight: bold;
+        font-family: candara;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 20px 5px 10px 0px;
+    }
+
+    .action-button-inicio {
+        width: 80px;
+        background: #616161;
+        font-weight: bold;
+        font-family: candara;;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 20px 5px 10px 0px;
+    }
+
+    
+    .bt-clear {
+        width: 80px;
+        background:#2C3E50;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        padding: 10px 5px;
+        margin: 20px 0px 35px 5px;
+        font-family: candara;
+    }
+
+}

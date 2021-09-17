@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+    
+    <head>
+
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Formulário</title>
+
+        <!--Libs-->
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <!--CSS Héctor Q. Torres-->
+        <link rel="stylesheet" type="text/css" href="assets/css/styleForm.css"/>
+
+        <!--Signature-->
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+        <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet"> 
+        <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.ui.touch-punch.js"></script>
+        <link type="text/css" href="assets/css/jquery.signature.css" rel="stylesheet"> 
+        <script type="text/javascript" src="assets/js/jquery.signature.js"></script>
+        <style>
+
+            .kbw-signature { width: 500px; height: 200px; }
+            @media (max-width: 600px) {
+                .kbw-signature { width: 350px; height: 200px; }
+            }
+            
+        </style>
+        <script>
+    
+            $(function() {
+                var sig = $('#sig').signature();
+                $('#disable').click(function() {
+                    var disable = $(this).text() === 'Disable';
+                    $(this).text(disable ? 'Enable' : 'Disable');
+                    sig.signature(disable ? 'disable' : 'enable');
+                });
+                $('#clear').click(function() {
+                    sig.signature('clear');
+                });
+                $('#json').click(function() {
+                    alert(sig.signature('toJSON'));
+                });
+                $('#svg').click(function() {
+                    alert(sig.signature('toSVG'));
+                });
+                $('#guidelineSignature').signature({guideline: true});
+            });
+    
+        </script>
+
+    </head>
+
+    <!--Inicio Form Wizard-->
+    <body oncontextmenu='return true' class='snippet-body'>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                        <h2 id="heading">Dados Formulário</h2>
+                        <p>Preencha todos os campos do formulário para ir para a próxima etapa</p>
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="personal"><strong>Dados do Participante</strong></li>
+                                <li id="contract"><strong>Pré-visualização do Documento</strong></li>
+                                <li id="payment"><strong>Assinatura do Participante</strong></li>
+                                <li id="confirm"><strong>Concluído</strong></li>
+                            </ul>
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Dados do Participante:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Etapa 1 - 4</h2>
+                                        </div>
+                                    </div>
+                                    <div class="flex-container">
+                                        <div class="reduce-container">
+                                            <input type="text" placeholder="Nome Completo" />
+                                        </div>
+                                        <div class="reduce-container">
+                                            <input type="number" placeholder="CPF" />
+                                        </div>
+                                        </u>
+                                    </div>
+                                    <a href="index.html" class="action-button-previous float-l">Voltar</a> 
+                                </div>
+                                <input id="next" type="button" name="next" class="action-button next " value="Próximo"/>     
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Pré-visualização Documento:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Etapa 2 - 4</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <iframe id="pdf-js-viewer" src="http://localhost:8081/Projects/formWizard/web/viewer.html?file=../assets/docs/example.pdf"
+                                        title="webviewer" frameborder="0" width="100%" height="500"></iframe>
+                                    </div>                
+                                </div> 
+                                <input id="next1" type="button" name="next" class="action-button next" value="Próximo"/>   
+                                <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Assinatura do Participante:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Etapa 3 - 4</h2>
+                                        </div>
+                                    </div>          
+                                    <div class="flex-container2">
+                                        <div id="sig" class="kbw-signature"></div>
+                                        <br>
+                                        <textarea hidden id="signature64" name="assinatura" ></textarea> 
+                                    </div>
+                                    <button class="bt-clear" type="button" onclick="clearSig()" id="clear">Limpar</button>
+                                </div> 
+                                <input id="submitForm" type="button" name="next" class="next action-button " onclick="sendData()" value="Próximo" /> 
+                                <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Concluído:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Etapa 5 - 5</h2>
+                                        </div>
+                                    </div>
+                                    <h2 class="color-text text-center"><strong>FIM !</strong></h2> <br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> 
+                                            <img src="./assets/img/confirm.png" class="fit-image"> 
+                                        </div>
+                                    </div> 
+                                    <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5 class="color-text text-center">Entrevista finalizada com sucesso.</h5>
+                                        </div>
+                                    </div>
+                                    <div class="flex-container3">
+                                            <a href="index.html" class="action-button-menu">Menu</a>
+                                            <a href="formWizard.html" class="action-button-inicio">Início</a>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+        
+        <!--JS Héctor Q. Torres-->
+        <script type='text/javascript' src="assets/js/scripts.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+    
+    <head>
+
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Consulta</title>
+
+        <!--Libs-->
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <!--CSS Héctor Q. Torres-->
+        <link rel="stylesheet" type="text/css" href="assets/css/styleConsult.css">
+
+    </head>
+
+
+    <body oncontextmenu='return true' class='snippet-body'>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                        <h2 id="heading">Consulta Participantes</h2>
+                        <p>Insira o CPF para gerar o documento digital do participante da pesquisa.</p>
+                        <form id="msform" action="generatePDF.php" method="POST">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="personal"></li>
+                            </ul>
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Dados Entrevistado:</h2>
+                                        </div>
+                                    </div>
+                                    <div class="flex-container">
+                                        <input inputmode="numeric"  class="reduce-inputB" type="text" placeholder="CPF"/>
+                                        <button class="bt-container" type="submit"><img class="bt-search" src="assets/img/magnifier.png"/></button>                                             
+                                    </div>
+                                </div> 
+                                <a href="index.html"  class="bt-link">Voltar<a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--JS Héctor Q. Torres-->
+        <script>
+
+        </script>
+
+    </body>
+
+</html>
