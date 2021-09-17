@@ -102,9 +102,9 @@ $('#clearT2').on('click', function(e) {
 
 
 function sendData(){
-
-    //const data = new FormData();
-    //data.append('key', value)
+    //example
+    const data = new FormData();
+    data.append('key', value)
     axios({
       url: 'http://example.com.br',
       method: 'post',

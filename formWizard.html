@@ -12,14 +12,13 @@
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
         <script type="text/javascript" src="assets/js/jquery.mask.js"></script>
-
-            
+         
         <!--CSS Héctor Q. Torres-->
         <link rel="stylesheet" type="text/css" href="assets/css/styleForm.css"/>
 
         <!--Signature-->
-        <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
         <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet"> 
         <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.ui.touch-punch.js"></script>
@@ -88,7 +87,7 @@
                                     </div>
                                     <div class="flex-container">
                                         <div class="reduce-container">
-                                            <input type="text" placeholder="Nome Completo" />
+                                            <input maxlength="30" type="text" placeholder="Nome Completo" />
                                         </div>
                                         <div class="reduce-container">
                                             <input id="cpf" type="text" placeholder="CPF" />
@@ -110,8 +109,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <!--add path of your dir-->
-                                        <iframe id="pdf-js-viewer" src="http://localhost:8081/Projects/formWizard/web/viewer.html?file=../assets/docs/example.pdf"
+                                        <!--add your URL in src="". Follow this example: '' http://server-example.com/formWizard/web/viewer.html?file=../assets/docs/example.pdf -->
+                                        <iframe id="pdf-js-viewer" src=""
                                         title="webviewer" frameborder="0" width="100%" height="500"></iframe>
                                     </div>                
                                 </div> 
