@@ -52,5 +52,5 @@ Follow this project's template, pay attetion to the comments. All the libraries 
 <br>
 I hope this tool helps with your research. 🚀👋🏽
 
- [![Linkedin Badge](https://img.shields.io/badge/-Héctor-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/hector-queiroz-torres-772071144/)](https://www.linkedin.com/in/hector-queiroz-torres-772071144/) 
+ [![Linkedin Badge](https://img.shields.io/badge/-Héctor-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/hector-queiroz-torres-772071144/)](https://br.linkedin.com/in/h%C3%A9ctor-queiroz-torres-772071144?trk=profile-badge/) 
 [![Gmail Badge](https://img.shields.io/badge/-hqt2300@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:hqt2300@gmail.com)](mailto:hqt2300@gmail.com)
